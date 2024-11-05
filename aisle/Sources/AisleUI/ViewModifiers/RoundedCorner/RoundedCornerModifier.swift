@@ -51,7 +51,7 @@ public struct RoundedCorner: Shape {
     ///     - rect: The rectangle in which to draw the rounded corner shape.
     /// - Returns: A Path representing the shape with rounded corners.
     public func path(in rect: CGRect) -> Path {
-        var path = UIBezierPath(roundedRect: rect, byRoundingCorners: corners, cornerRadii: CGSize(width: radius, height: radius))
+        let path = UIBezierPath(roundedRect: rect, byRoundingCorners: corners, cornerRadii: CGSize(width: radius, height: radius))
         return Path(path.cgPath)
     }
 }
