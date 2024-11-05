@@ -30,7 +30,7 @@ public struct AislePrimaryButtonStyle: ButtonStyle {
             .background(Color.aisleDemoButton)
             .clipShape(Capsule(style: .circular))
             .saturation(isEnabled ? 1 : 0) // Grays out if button is disabled
-            .opacity(configuration.isPressed ? 0.5 : 1)
+            .opacity(configuration.isPressed ? 0.66 : 1)
             .scaleEffect(configuration.isPressed ? 0.96 : 1)
 
     }
