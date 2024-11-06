@@ -22,20 +22,16 @@ public struct PhoneInputReducer {
         }
         var phoneNumber: String
         var countryCode: String
-        var focusedField: Field?
+        @Presents var otpInput: OTPInputReducer.State?
 
-        enum Field: String, Hashable {
-          case phoneNumber
-        }
     }
     
     public enum Action: BindableAction, Equatable {
         case binding(BindingAction<State>)
         case didTapContinue(String)
+        case otpInput(PresentationAction<OTPInputReducer.Action>)
     }
-    
-    @Dependency(\.mainQueue) var mainQueue
-    
+        
     public var body: some ReducerOf<Self> {
         BindingReducer()
         Reduce { state, action in
@@ -44,8 +40,28 @@ public struct PhoneInputReducer {
                 return .none
             case let .didTapContinue(phoneNumber):
                 state.phoneNumber = phoneNumber
+                state.otpInput = OTPInputReducer.State(phoneNumber: phoneNumber, countryCode: state.countryCode)
+                return .none
+            case let .otpInput(presentationAction):
+                switch presentationAction {
+                case .dismiss:
+                    return .none
+                case let .presented(presentedAction):
+                    switch presentedAction {
+                    case .didTapResend:
+                        return .none
+                    case .didTapEditPhoneNumber:
+                        state.otpInput = nil
+                        return .none
+                    default:
+                        return .none
+                    }
+                }
                 return .none
             }
+        }
+        .ifLet(\.$otpInput, action: \.otpInput) {
+            OTPInputReducer()
         }
     }
 }

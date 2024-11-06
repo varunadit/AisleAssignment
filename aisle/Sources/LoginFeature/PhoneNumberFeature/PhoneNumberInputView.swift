@@ -44,6 +44,10 @@ public struct PhoneNumberInputView: View {
             
             Spacer()
         }
+        .navigationDestination(item: $store.scope(state: \.otpInput, action: \.otpInput)) { store in
+            OTPInputView(store: store)
+                .toolbar(.hidden, for: .navigationBar)
+        }
         .dynamicTypeSize(.xLarge)
         .padding(24)
         .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)

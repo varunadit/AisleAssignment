@@ -16,6 +16,10 @@ public struct AppView: View {
     }
     
     public var body: some View {
-        PhoneNumberInputView(store: store.scope(state:\.phoneNumberInput, action: \.phoneNumberInput))
+        NavigationStack {
+            PhoneNumberInputView(store: store.scope(state:\.phoneNumberInput, action: \.phoneNumberInput))
+                .navigationBarTitleDisplayMode(.inline)
+                .toolbar(.hidden, for: .navigationBar)
+        }
     }
 }

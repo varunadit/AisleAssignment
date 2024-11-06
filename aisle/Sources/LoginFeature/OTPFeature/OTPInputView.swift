@@ -59,6 +59,7 @@ public struct OTPInputView: View {
         .padding(24)
         .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
         .background(Color.aisleDemoBackground)
+        
     }
     
     private var titleSection: some View {

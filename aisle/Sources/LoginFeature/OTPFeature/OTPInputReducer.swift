@@ -9,7 +9,7 @@ import ComposableArchitecture
 import SwiftUI
 
 @Reducer
-public struct OTPInputReducer : Sendable {
+public struct OTPInputReducer: Sendable {
     
     public init() {}
     
@@ -18,10 +18,10 @@ public struct OTPInputReducer : Sendable {
         public var otp: String = ""
         public var phoneNumber: String
         public var countryCode: String
-        public var timerOn: Bool = false
+        public var timerOn: Bool = true
         public var timer: Int
         public var timerDuration: Int
-        public init(phoneNumber: String, countryCode: String, timer: Int = 60) {
+        public init(phoneNumber: String, countryCode: String, timer: Int = 60) {  // Public initializer
             self.phoneNumber = phoneNumber
             self.countryCode = countryCode
             self.timer = timer
@@ -29,7 +29,7 @@ public struct OTPInputReducer : Sendable {
         }
     }
     
-    public enum Action: Equatable {
+    public enum Action: Equatable {  // Public action enum
         case didTapContinue(otp: String)
         case didTapEditPhoneNumber
         case didTapResend
