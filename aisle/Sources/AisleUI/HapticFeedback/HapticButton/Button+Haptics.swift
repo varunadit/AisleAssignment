@@ -14,6 +14,15 @@ public extension Button {
     ///     - style: The force feedback of the button.
     ///     - action: The action to be taken on button press.
     ///     - label: The view to be presented as the button label.
+    ///
+    /// - Usage:
+    /// ```
+    /// Button(.soft) {
+    ///     print("Button clicked")
+    /// } label: {
+    ///     Text("Haptic Button")
+    /// }
+    /// ```
     init(
         _ style: UIImpactFeedbackGenerator.FeedbackStyle,
         action: @escaping () -> Void,

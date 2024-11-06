@@ -11,7 +11,9 @@ import SwiftUI
 struct AisleAssignmentApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            PhoneNumberInputView{ completeNumber in
+                print("Phone number submitted: \(completeNumber)")
+            }
         }
     }
 }
