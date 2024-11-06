@@ -6,14 +6,19 @@
 //
 
 import SwiftUI
+import AppFeature
 
 @main
 struct AisleAssignmentApp: App {
+    @UIApplicationDelegateAdaptor(AppDelegate.self) private var appDelegate
+    
     var body: some Scene {
         WindowGroup {
-            PhoneNumberInputView{ completeNumber in
-                print("Phone number submitted: \(completeNumber)")
-            }
+            AppView(store: appDelegate.store)
+//            PhoneNumberInputView()
+//            { completeNumber in
+//                print("Phone number submitted: \(completeNumber)")
+//            }
         }
     }
 }
