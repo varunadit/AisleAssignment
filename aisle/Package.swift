@@ -16,11 +16,27 @@ let package = Package(
             name: "AppFeature",
             targets: ["AppFeature"]
         ),
+        .library(
+            name: "ServerRouter",
+            targets: ["ServerRouter"]
+        ),
+        .library(
+            name: "SharedModels",
+            targets: ["SharedModels"]
+        )
     ],
     dependencies: [
         .package(
             url: "https://github.com/pointfreeco/swift-composable-architecture",
             exact: "1.15.0"
+        ),
+        .package(
+            url: "https://github.com/pointfreeco/swift-url-routing",
+            exact: "0.6.2"
+        ),
+        .package(
+            url: "https://github.com/pointfreeco/swift-parsing",
+            exact: "0.13.0"
         ),
     ],
     targets: [
@@ -43,5 +59,16 @@ let package = Package(
                 .product(name: "ComposableArchitecture", package: "swift-composable-architecture")
             ]
         ),
+        .target(
+            name: "ServerRouter",
+            dependencies: [
+                "SharedModels",
+                .product(name: "URLRouting", package: "swift-url-routing"),
+                .product(name: "Parsing", package: "swift-parsing")
+            ]
+        ),
+        .target(
+            name: "SharedModels"
+        )
     ]
 )
