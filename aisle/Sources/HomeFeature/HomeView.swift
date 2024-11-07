@@ -17,7 +17,6 @@ public struct HomeView: View {
     }
     public var body: some View {
         GeometryReader { geometry in
-
             WithPerceptionTracking {
                 ScrollView {
                     
@@ -114,11 +113,16 @@ public struct HomeView: View {
                                 
                             }
                         }
+                        .padding(.bottom)
+                        .frame(maxWidth: .infinity, maxHeight: geometry.size.height)
                         
                     }
                     
                 }
-                .padding()
+                .padding(.horizontal)
+            }
+            .onAppear {
+                store.send(.fetch)
             }
         }
         .background(Color.aisleDemoBackground)

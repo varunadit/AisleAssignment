@@ -36,12 +36,16 @@ public struct HomeReducer: Sendable {
             case .fetch:
                 state.isLoading = true
                 return .run { send in
-                    let response = try await getProfileList()
-                    switch response {
-                    case .success(let profileList):
-                        await send(.fetched(profileList))
-                    case .failure:
-                        break
+                    do {
+                        let response = try await getProfileList()
+                        switch response {
+                        case .success(let profileList):
+                            await send(.fetched(profileList))
+                        case .failure:
+                            break
+                        }
+                    } catch {
+                        print(error)
                     }
                 }
             case let .fetched(profileList):

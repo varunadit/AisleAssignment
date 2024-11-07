@@ -12,7 +12,7 @@ import AisleUI
 public struct OTPInputView: View {
     
     @State var otp: String = ""
-    let store: StoreOf<OTPInputReducer>
+    @Bindable var store: StoreOf<OTPInputReducer>
     
     public init(store: StoreOf<OTPInputReducer>) {
         self.store = store
@@ -29,7 +29,7 @@ public struct OTPInputView: View {
             
             HStack(spacing: 12){
                 Button {
-
+                    store.send(.didTapContinue(otp: otp))
                 } label: {
                     Text("Continue")
                         .fontWeight(.bold)
@@ -59,6 +59,10 @@ public struct OTPInputView: View {
         .padding(24)
         .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
         .background(Color.aisleDemoBackground)
+        .navigationDestination(item: $store.scope(state: \.root, action: \.root)) { store in
+            RootView(store: store)
+                .toolbar(.hidden, for: .navigationBar)
+        }
         
     }
     
