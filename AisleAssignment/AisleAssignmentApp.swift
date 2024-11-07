@@ -15,10 +15,6 @@ struct AisleAssignmentApp: App {
     var body: some Scene {
         WindowGroup {
             AppView(store: appDelegate.store)
-//            PhoneNumberInputView()
-//            { completeNumber in
-//                print("Phone number submitted: \(completeNumber)")
-//            }
         }
     }
 }

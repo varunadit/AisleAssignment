@@ -10,6 +10,7 @@ import DependenciesMacros
 import Foundation
 import ServerRouter
 import SharedModels
+import ComposableArchitecture
 
 @DependencyClient
 public struct APIClient: Sendable {
@@ -103,6 +104,7 @@ extension APIClient: DependencyKey {
                     let decodedResponse = try JSONDecoder().decode(OTPVerificationResponse.self, from: data)
                     if let token = decodedResponse.token {
                         Self.authToken = token
+                        UserDefaults.standard.set(token, forKey: "authToken")
                         return .success(decodedResponse)
                     } else {
                         return .failure(APIError.unauthorized)

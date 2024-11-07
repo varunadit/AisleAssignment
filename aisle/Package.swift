@@ -35,6 +35,10 @@ let package = Package(
         .library(
             name: "HomeFeature",
             targets: ["HomeFeature"]
+        ),
+        .library(
+            name: "TabFeature",
+            targets: ["TabFeature"]
         )
     ],
     dependencies: [
@@ -67,6 +71,8 @@ let package = Package(
             dependencies: [
                 "AisleUI",
                 "LoginFeature",
+                "HomeFeature",
+                "TabFeature",
                 .product(name: "ComposableArchitecture", package: "swift-composable-architecture")
             ]
         ),
@@ -93,6 +99,8 @@ let package = Package(
             dependencies: [
                 "AisleUI",
                 "APIClient",
+                "HomeFeature",
+                "TabFeature",
                 .product(name: "ComposableArchitecture", package: "swift-composable-architecture"),
             ]
         ),
@@ -117,6 +125,14 @@ let package = Package(
             dependencies: [
                 "AisleUI",
                 "APIClient",
+                .product(name: "ComposableArchitecture", package: "swift-composable-architecture"),
+            ]
+        ),
+        .target(
+            name: "TabFeature",
+            dependencies: [
+                "AisleUI",
+                "SharedModels",
                 .product(name: "ComposableArchitecture", package: "swift-composable-architecture"),
             ]
         ),

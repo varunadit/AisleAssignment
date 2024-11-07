@@ -7,6 +7,9 @@
 
 import ComposableArchitecture
 import LoginFeature
+import HomeFeature
+import TabFeature
+
 @Reducer
 public struct AppReducer {
     
@@ -46,8 +49,13 @@ public struct AppReducer {
                 return .none
             case .appDelegate:
                 return .none
-            case .phoneNumberInput:
-                return .none
+            case let .phoneNumberInput(action):
+                switch action {
+//                case .otpInput(.presented(.loginSuccess)):
+//                    return .send(.home(.fetch))
+                default:
+                    return .none
+                }
             }
         }
     }
