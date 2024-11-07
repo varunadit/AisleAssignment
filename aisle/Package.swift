@@ -16,10 +16,10 @@ let package = Package(
             name: "AppFeature",
             targets: ["AppFeature"]
         ),
-        .library(
-            name: "ServerRouter",
-            targets: ["ServerRouter"]
-        ),
+//        .library(
+//            name: "ServerRouter",
+//            targets: ["ServerRouter"]
+//        ),
         .library(
             name: "SharedModels",
             targets: ["SharedModels"]
@@ -84,14 +84,6 @@ let package = Package(
             ]
         ),
         .target(
-            name: "ServerRouter",
-            dependencies: [
-                "SharedModels",
-                .product(name: "URLRouting", package: "swift-url-routing"),
-                .product(name: "Parsing", package: "swift-parsing")
-            ]
-        ),
-        .target(
             name: "SharedModels"
         ),
         .target(
@@ -115,7 +107,6 @@ let package = Package(
             name: "APIClient",
             dependencies: [
                 "SharedModels",
-                "ServerRouter",
                 .product(name: "Dependencies", package: "swift-dependencies"),
                 .product(name: "DependenciesMacros", package: "swift-dependencies")
             ]

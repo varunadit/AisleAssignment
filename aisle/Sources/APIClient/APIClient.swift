@@ -8,7 +8,6 @@
 import Dependencies
 import DependenciesMacros
 import Foundation
-import ServerRouter
 import SharedModels
 import ComposableArchitecture
 
@@ -90,7 +89,6 @@ extension APIClient: DependencyKey {
             }
             request.httpBody = body
             request.setValue("application/json", forHTTPHeaderField: "Content-Type")
-//            request.setValue(Self.authToken, forHTTPHeaderField: "Authorization")
             
             let (data, response) = try await URLSession.shared.data(for: request)
             
