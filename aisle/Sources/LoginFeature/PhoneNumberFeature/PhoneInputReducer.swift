@@ -81,7 +81,6 @@ public struct PhoneInputReducer : Sendable{
                         return .none
                     }
                 }
-                return .none
             }
         }
         .ifLet(\.$otpInput, action: \.otpInput) {

@@ -19,7 +19,7 @@ public struct RootView: View {
     }
     public var body: some View {
         GeometryReader { geometry in
-            let screenHeight = geometry.size.height
+            let _ = geometry.size.height
             let screenWidth = geometry.size.width
             
             var tabWidth: CGFloat {

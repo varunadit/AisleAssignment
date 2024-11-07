@@ -26,7 +26,7 @@ public struct AisleTabView: View {
     
     public var body: some View {
         
-        let screenHeight = parentGeometry.size.height
+        let _ = parentGeometry.size.height
         let screenWidth = parentGeometry.size.width
         let iconH: CGFloat = screenWidth * (200/1000)
         
