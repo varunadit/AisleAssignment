@@ -47,14 +47,6 @@ let package = Package(
             exact: "1.15.0"
         ),
         .package(
-            url: "https://github.com/pointfreeco/swift-url-routing",
-            exact: "0.6.2"
-        ),
-        .package(
-            url: "https://github.com/pointfreeco/swift-parsing",
-            exact: "0.13.0"
-        ),
-        .package(
             url: "https://github.com/pointfreeco/swift-dependencies",
             exact: "1.4.1"
         )

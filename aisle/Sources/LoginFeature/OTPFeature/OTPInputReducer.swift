@@ -69,7 +69,7 @@ public struct OTPInputReducer: Sendable {
                 return .run { [phoneNumber = state.phoneNumber, countryCode = state.countryCode] send in
                     let response = try await postOTP(OTPVerification(phoneNumber: countryCode+phoneNumber, otp: otp))
                     switch response {
-                    case let .success(otpResponse):
+                    case .success(_):
                         await send(.loginSuccess)
                         break
                     case let .failure(error):
