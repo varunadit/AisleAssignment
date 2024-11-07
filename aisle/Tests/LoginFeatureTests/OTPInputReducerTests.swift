@@ -27,11 +27,7 @@ final class OTPInputReducerTests: XCTestCase {
             $0.continuousClock = clock
         }
         
-        // Start timer
-        await store.send(.startTimer) { state in
-            state.timer = 3  // Reset to initial duration
-            state.timerOn = true
-        }
+        await store.send(.startTimer)
         
         await clock.advance(by: .seconds(1))
         await store.receive(.timerTicked) { state in
@@ -61,7 +57,8 @@ final class OTPInputReducerTests: XCTestCase {
         let store = TestStore(
             initialState: OTPInputReducer.State(
                 phoneNumber: "1234567890",
-                countryCode: "+91"
+                countryCode: "+91",
+                timer: 3
             )
         ) {
             OTPInputReducer()
@@ -72,7 +69,7 @@ final class OTPInputReducerTests: XCTestCase {
         
         await store.send(.didTapResend)
         await store.receive(.startTimer) { state in
-            state.timer = 60
+            state.timer = 3
             state.timerOn = true
         }
     }

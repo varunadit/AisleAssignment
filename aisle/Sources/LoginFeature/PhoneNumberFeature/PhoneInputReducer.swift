@@ -16,13 +16,14 @@ public struct PhoneInputReducer {
     @ObservableState
     public struct State: Equatable {
         
-        public init(phoneNumber: String = "", countryCode: String = "+91") {
+        public init(phoneNumber: String = "", countryCode: String = "+91", otpInput: OTPInputReducer.State? = nil) {
             self.phoneNumber = phoneNumber
             self.countryCode = countryCode
+            self.otpInput = otpInput
         }
-        var phoneNumber: String
-        var countryCode: String
-        @Presents var otpInput: OTPInputReducer.State?
+        public var phoneNumber: String
+        public var countryCode: String
+        @Presents public var otpInput: OTPInputReducer.State?
 
     }
     
