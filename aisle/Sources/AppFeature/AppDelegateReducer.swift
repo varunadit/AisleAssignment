@@ -9,6 +9,7 @@ import Foundation
 import ComposableArchitecture
 
 public struct AppDelegateReducer: Reducer{
+    public init() {}
     public struct State: Equatable {
         public init() {}
     }

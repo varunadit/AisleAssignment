@@ -23,7 +23,11 @@ let package = Package(
         .library(
             name: "SharedModels",
             targets: ["SharedModels"]
-        )
+        ),
+        .library(
+            name: "LoginFeature",
+            targets: ["LoginFeature"]
+        ),
     ],
     dependencies: [
         .package(
@@ -49,6 +53,7 @@ let package = Package(
             name: "AppFeature",
             dependencies: [
                 "AisleUI",
+                "LoginFeature",
                 .product(name: "ComposableArchitecture", package: "swift-composable-architecture")
             ]
         ),
@@ -69,6 +74,20 @@ let package = Package(
         ),
         .target(
             name: "SharedModels"
-        )
+        ),
+        .target(
+            name: "LoginFeature",
+            dependencies: [
+                "AisleUI",
+                .product(name: "ComposableArchitecture", package: "swift-composable-architecture"),
+            ]
+        ),
+        .testTarget(
+            name: "LoginFeatureTests",
+            dependencies: [
+                "LoginFeature",
+                .product(name: "ComposableArchitecture", package: "swift-composable-architecture")
+            ]
+        ),
     ]
 )

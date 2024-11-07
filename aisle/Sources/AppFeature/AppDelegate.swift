@@ -13,6 +13,7 @@ public final class AppDelegate: NSObject, UIApplicationDelegate {
         initialState: AppReducer.State()
     ) {
         AppReducer()
+            ._printChanges()
     }
     
     // MARK: Application Did Finish Launching

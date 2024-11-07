@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1897410A2CDB7FAC0031B22B /* AisleUI in Frameworks */ = {isa = PBXBuildFile; productRef = 189741092CDB7FAC0031B22B /* AisleUI */; };
+		18EB6BE52CDBC2DA00560769 /* AppFeature in Frameworks */ = {isa = PBXBuildFile; productRef = 18EB6BE42CDBC2DA00560769 /* AppFeature */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1897410A2CDB7FAC0031B22B /* AisleUI in Frameworks */,
+				18EB6BE52CDBC2DA00560769 /* AppFeature in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -128,6 +130,7 @@
 			name = AisleAssignment;
 			packageProductDependencies = (
 				189741092CDB7FAC0031B22B /* AisleUI */,
+				18EB6BE42CDBC2DA00560769 /* AppFeature */,
 			);
 			productName = AisleAssignment;
 			productReference = 184C7D612CDA3DBD001204CC /* AisleAssignment.app */;
@@ -583,6 +586,10 @@
 		189741092CDB7FAC0031B22B /* AisleUI */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = AisleUI;
+		};
+		18EB6BE42CDBC2DA00560769 /* AppFeature */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = AppFeature;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
