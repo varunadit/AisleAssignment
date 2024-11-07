@@ -11,14 +11,7 @@ import SwiftUI
 /// The `AislePrimaryButtonStyle` style applies consistent padding, foreground color,
 /// background color, and shape to buttons, giving them a capsule appearance.
 /// It also adjusts saturation based on the button's enabled state, graying out when disabled.
-///
-/// Usage:
-/// ```swift
-/// Button("Click me") {
-///     print("Button clicked")
-/// }
-/// .buttonStyle(.aislePrimary)
-/// ```
+/// 
 public struct AislePrimaryButtonStyle: ButtonStyle {
     @Environment(\.isEnabled) var isEnabled
 
@@ -41,7 +34,7 @@ public extension ButtonStyle where Self == AislePrimaryButtonStyle {
     ///
     /// This provides a standard style that can be consistently reused in the Aisle app.
     /// Example:
-    /// ```swift
+    /// ```
     /// Button("Click me") {
     ///     print("Button clicked")
     /// }

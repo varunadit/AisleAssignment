@@ -6,12 +6,15 @@
 //
 
 import SwiftUI
+import AppFeature
 
 @main
 struct AisleAssignmentApp: App {
+    @UIApplicationDelegateAdaptor(AppDelegate.self) private var appDelegate
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            AppView(store: appDelegate.store)
         }
     }
 }

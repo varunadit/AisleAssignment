@@ -16,12 +16,49 @@ let package = Package(
             name: "AppFeature",
             targets: ["AppFeature"]
         ),
+//        .library(
+//            name: "ServerRouter",
+//            targets: ["ServerRouter"]
+//        ),
+        .library(
+            name: "SharedModels",
+            targets: ["SharedModels"]
+        ),
+        .library(
+            name: "LoginFeature",
+            targets: ["LoginFeature"]
+        ),
+        .library(
+            name: "APIClient",
+            targets: ["APIClient"]
+        ),
+        .library(
+            name: "HomeFeature",
+            targets: ["HomeFeature"]
+        ),
+        .library(
+            name: "TabFeature",
+            targets: ["TabFeature"]
+        )
     ],
     dependencies: [
         .package(
             url: "https://github.com/pointfreeco/swift-composable-architecture",
             exact: "1.15.0"
         ),
+        .package(
+            url: "https://github.com/pointfreeco/swift-url-routing",
+            exact: "0.6.2"
+        ),
+        .package(
+            url: "https://github.com/pointfreeco/swift-parsing",
+            exact: "0.13.0"
+        ),
+        .package(
+            url: "https://github.com/pointfreeco/swift-dependencies",
+            exact: "1.4.1"
+        )
+
     ],
     targets: [
         // Targets are the basic building blocks of a package, defining a module or a test suite.
@@ -33,6 +70,9 @@ let package = Package(
             name: "AppFeature",
             dependencies: [
                 "AisleUI",
+                "LoginFeature",
+                "HomeFeature",
+                "TabFeature",
                 .product(name: "ComposableArchitecture", package: "swift-composable-architecture")
             ]
         ),
@@ -41,6 +81,50 @@ let package = Package(
             dependencies: [
                 "AppFeature",
                 .product(name: "ComposableArchitecture", package: "swift-composable-architecture")
+            ]
+        ),
+        .target(
+            name: "SharedModels"
+        ),
+        .target(
+            name: "LoginFeature",
+            dependencies: [
+                "AisleUI",
+                "APIClient",
+                "HomeFeature",
+                "TabFeature",
+                .product(name: "ComposableArchitecture", package: "swift-composable-architecture"),
+            ]
+        ),
+        .testTarget(
+            name: "LoginFeatureTests",
+            dependencies: [
+                "LoginFeature",
+                .product(name: "ComposableArchitecture", package: "swift-composable-architecture")
+            ]
+        ),
+        .target(
+            name: "APIClient",
+            dependencies: [
+                "SharedModels",
+                .product(name: "Dependencies", package: "swift-dependencies"),
+                .product(name: "DependenciesMacros", package: "swift-dependencies")
+            ]
+        ),
+        .target(
+            name: "HomeFeature",
+            dependencies: [
+                "AisleUI",
+                "APIClient",
+                .product(name: "ComposableArchitecture", package: "swift-composable-architecture"),
+            ]
+        ),
+        .target(
+            name: "TabFeature",
+            dependencies: [
+                "AisleUI",
+                "SharedModels",
+                .product(name: "ComposableArchitecture", package: "swift-composable-architecture"),
             ]
         ),
     ]

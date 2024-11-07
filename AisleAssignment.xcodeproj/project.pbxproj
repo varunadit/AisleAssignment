@@ -6,6 +6,11 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		1897410A2CDB7FAC0031B22B /* AisleUI in Frameworks */ = {isa = PBXBuildFile; productRef = 189741092CDB7FAC0031B22B /* AisleUI */; };
+		18EB6BE52CDBC2DA00560769 /* AppFeature in Frameworks */ = {isa = PBXBuildFile; productRef = 18EB6BE42CDBC2DA00560769 /* AppFeature */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		184C7D722CDA3DBF001204CC /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -53,6 +58,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1897410A2CDB7FAC0031B22B /* AisleUI in Frameworks */,
+				18EB6BE52CDBC2DA00560769 /* AppFeature in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,6 +87,7 @@
 				184C7D632CDA3DBD001204CC /* AisleAssignment */,
 				184C7D742CDA3DBF001204CC /* AisleAssignmentTests */,
 				184C7D7E2CDA3DBF001204CC /* AisleAssignmentUITests */,
+				189741082CDB7FAC0031B22B /* Frameworks */,
 				184C7D622CDA3DBD001204CC /* Products */,
 			);
 			sourceTree = "<group>";
@@ -92,6 +100,13 @@
 				184C7D7B2CDA3DBF001204CC /* AisleAssignmentUITests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		189741082CDB7FAC0031B22B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -114,6 +129,8 @@
 			);
 			name = AisleAssignment;
 			packageProductDependencies = (
+				189741092CDB7FAC0031B22B /* AisleUI */,
+				18EB6BE42CDBC2DA00560769 /* AppFeature */,
 			);
 			productName = AisleAssignment;
 			productReference = 184C7D612CDA3DBD001204CC /* AisleAssignment.app */;
@@ -564,6 +581,17 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		189741092CDB7FAC0031B22B /* AisleUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = AisleUI;
+		};
+		18EB6BE42CDBC2DA00560769 /* AppFeature */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = AppFeature;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 184C7D592CDA3DBD001204CC /* Project object */;
 }

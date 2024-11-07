@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import AisleUI
 
 struct ContentView: View {
     var body: some View {
@@ -19,6 +20,4 @@ struct ContentView: View {
     }
 }
 
-#Preview {
-    ContentView()
-}
+
