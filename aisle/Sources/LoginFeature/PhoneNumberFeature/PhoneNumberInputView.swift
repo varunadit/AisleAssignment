@@ -47,7 +47,7 @@ public struct PhoneNumberInputView: View {
             OTPInputView(store: store)
                 .toolbar(.hidden, for: .navigationBar)
         }
-        .dynamicTypeSize(.xLarge)
+        .dynamicTypeSize(...(.xLarge))
         .padding(24)
         .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
         .background(Color.aisleDemoBackground)
