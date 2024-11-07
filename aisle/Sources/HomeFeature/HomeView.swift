@@ -44,7 +44,7 @@ public struct HomeView: View {
                                     LinearGradient(colors: [.clear, .clear, .black.opacity(0.7)], startPoint: .top, endPoint: .bottom)
                                     
                                     VStack(alignment: .leading) {
-                                        Text((store.profileList?.invites.profiles.first?.generalInformation.firstName ?? " ") + " \(store.profileList?.invites.profiles.first?.generalInformation.age ?? 0)")
+                                        Text((store.profileList?.invites.profiles.first?.generalInformation.firstName ?? " ") + ", \(store.profileList?.invites.profiles.first?.generalInformation.age ?? 0)")
                                             .foregroundStyle(.white)
                                             .font(.title2)
                                             .fontWeight(.bold)

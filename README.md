@@ -19,4 +19,7 @@ Built with Swift and SwiftUI.
 I have decided to go with a modular approach that gives room to grow as and when the App decided to add on new feature, facilitated by TCA and SPM
 
 If I had more time for submission this is what I would do differently:
- - Have a different navigation approach and
+ - Have a different navigation approach
+ - Use some form of persistence to store logged in state and auth token on the keychain
+ - Built a more scalable APIClient with end-points segregated (I did try this approach but I figured I would not be able to complete the submission on time)
+ - Decouple the RootView away from the Login Flow 
