@@ -15,13 +15,13 @@ final class OTPInputReducerTests: XCTestCase {
     func testOTPFlow_TimerStartTickStop() async {
         let clock = TestClock()
         
-        let store = TestStore(
-            initialState: OTPInputReducer.State(
+        let store = TestStore (
+            initialState: OTPInputReducer.State (
                 phoneNumber: "1234567890",
                 countryCode: "+91",
                 timer: 3
             )
-        ) {
+        ){
             OTPInputReducer()
         } withDependencies: {
             $0.continuousClock = clock

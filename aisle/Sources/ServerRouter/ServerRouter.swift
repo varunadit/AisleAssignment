@@ -8,7 +8,7 @@ import Foundation
 import URLRouting
 import SharedModels
 
-public struct ServerRouter {
+public struct ServerRouter: ParserPrinter {
     let decoder: JSONDecoder
     let encoder: JSONEncoder
     
@@ -65,8 +65,6 @@ public struct ServerRouter {
             }
         }
 
-        
-        
         authRouter
             .eraseToAnyParserPrinter()
     }

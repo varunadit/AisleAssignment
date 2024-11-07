@@ -11,7 +11,6 @@ import ComposableArchitecture
 /// A view that displays a phone number input form with country code and number field
 public struct PhoneNumberInputView: View {
     @State private var phoneNumber: String = ""
-//    var onContinue: (String) -> Void
     @Bindable var store: StoreOf<PhoneInputReducer>
     public init(store: StoreOf<PhoneInputReducer>) {
         self.store = store
