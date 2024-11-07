@@ -59,6 +59,8 @@ public struct RootView: View {
                 .ignoresSafeArea(.container, edges: .bottom)
             }
         }
+        .dynamicTypeSize(...(.large))
+
     }
     
 }

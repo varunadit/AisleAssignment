@@ -52,6 +52,7 @@ public struct OTPInputView: View {
             
             Spacer()
         }
+        .dynamicTypeSize(...(.xLarge))
         .foregroundStyle(.black)
         .onAppear(perform: {
             store.send(.startTimer)
