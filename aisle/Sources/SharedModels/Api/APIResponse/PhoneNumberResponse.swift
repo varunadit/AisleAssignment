@@ -7,4 +7,8 @@
 
 public struct PhoneNumberResponse: Codable, Equatable, Sendable {
     public let status: Bool
+    
+    public init(status: Bool) {
+        self.status = status
+    }
 }

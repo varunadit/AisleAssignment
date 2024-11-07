@@ -3,4 +3,176 @@
    uuid = "9162B3A1-B7D0-4912-A1B2-9C07C8CF650D"
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "40C9D067-9B21-4A78-B411-93E87CA6D0B7"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "aisle/Sources/LoginFeature/PhoneNumberFeature/PhoneInputReducer.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "56"
+            endingLineNumber = "56"
+            landmarkName = "body"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "40C9D067-9B21-4A78-B411-93E87CA6D0B7 - 6edd3656a1ca1d3a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for closure #1 @Sendable (ComposableArchitecture.Send&lt;LoginFeature.PhoneInputReducer.Action&gt;) async -&gt; () in closure #1 (inout LoginFeature.PhoneInputReducer.State, LoginFeature.PhoneInputReducer.Action) -&gt; ComposableArchitecture.Effect&lt;LoginFeature.PhoneInputReducer.Action&gt; in LoginFeature.PhoneInputReducer.body.getter : some"
+                  moduleName = "AisleAssignment.debug.dylib"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/varunadit/iOS%20Dev/AisleAssignment/AisleAssignment/aisle/Sources/LoginFeature/PhoneNumberFeature/PhoneInputReducer.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "56"
+                  endingLineNumber = "56">
+               </Location>
+               <Location
+                  uuid = "40C9D067-9B21-4A78-B411-93E87CA6D0B7 - 6edd3656a1ca1d3a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for closure #1 @Sendable (ComposableArchitecture.Send&lt;LoginFeature.PhoneInputReducer.Action&gt;) async -&gt; () in closure #1 (inout LoginFeature.PhoneInputReducer.State, LoginFeature.PhoneInputReducer.Action) -&gt; ComposableArchitecture.Effect&lt;LoginFeature.PhoneInputReducer.Action&gt; in LoginFeature.PhoneInputReducer.body.getter : some"
+                  moduleName = "AisleAssignment.debug.dylib"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/varunadit/iOS%20Dev/AisleAssignment/AisleAssignment/aisle/Sources/LoginFeature/PhoneNumberFeature/PhoneInputReducer.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "56"
+                  endingLineNumber = "56">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "5A813277-CB75-4CE6-8777-393AA38E66D8"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "aisle/Sources/LoginFeature/PhoneNumberFeature/PhoneInputReducer.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "61"
+            endingLineNumber = "61"
+            landmarkName = "body"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "8AB47E84-AE22-4182-BD4F-12C7702850D5"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "aisle/Sources/LoginFeature/PhoneNumberFeature/PhoneInputReducer.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "47"
+            endingLineNumber = "47"
+            landmarkName = "body"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "DC2E7A35-3B58-4590-86A4-8A17AADECBFF"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "aisle/Sources/LoginFeature/PhoneNumberFeature/PhoneInputReducer.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "48"
+            endingLineNumber = "48"
+            landmarkName = "body"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "56283FDF-5E48-496F-9EFE-94E973EE6FA3"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "aisle/Sources/LoginFeature/PhoneNumberFeature/PhoneInputReducer.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "57"
+            endingLineNumber = "57"
+            landmarkName = "body"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F7EA1AE9-1D60-4731-A605-25239C079111"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "aisle/Sources/LoginFeature/PhoneNumberFeature/PhoneInputReducer.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "58"
+            endingLineNumber = "58"
+            landmarkName = "body"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "F7EA1AE9-1D60-4731-A605-25239C079111 - 6edd3656a1ca1d7c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for closure #1 @Sendable (ComposableArchitecture.Send&lt;LoginFeature.PhoneInputReducer.Action&gt;) async -&gt; () in closure #1 (inout LoginFeature.PhoneInputReducer.State, LoginFeature.PhoneInputReducer.Action) -&gt; ComposableArchitecture.Effect&lt;LoginFeature.PhoneInputReducer.Action&gt; in LoginFeature.PhoneInputReducer.body.getter : some"
+                  moduleName = "AisleAssignment.debug.dylib"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/varunadit/iOS%20Dev/AisleAssignment/AisleAssignment/aisle/Sources/LoginFeature/PhoneNumberFeature/PhoneInputReducer.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "58"
+                  endingLineNumber = "58">
+               </Location>
+               <Location
+                  uuid = "F7EA1AE9-1D60-4731-A605-25239C079111 - c2d8af719cc56b7f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(4) suspend resume partial function for closure #1 @Sendable (ComposableArchitecture.Send&lt;LoginFeature.PhoneInputReducer.Action&gt;) async -&gt; () in closure #1 (inout LoginFeature.PhoneInputReducer.State, LoginFeature.PhoneInputReducer.Action) -&gt; ComposableArchitecture.Effect&lt;LoginFeature.PhoneInputReducer.Action&gt; in LoginFeature.PhoneInputReducer.body.getter : some"
+                  moduleName = "AisleAssignment.debug.dylib"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/varunadit/iOS%20Dev/AisleAssignment/AisleAssignment/aisle/Sources/LoginFeature/PhoneNumberFeature/PhoneInputReducer.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "58"
+                  endingLineNumber = "58">
+               </Location>
+               <Location
+                  uuid = "F7EA1AE9-1D60-4731-A605-25239C079111 - 26d6000cffd1f97e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(5) suspend resume partial function for closure #1 @Sendable (ComposableArchitecture.Send&lt;LoginFeature.PhoneInputReducer.Action&gt;) async -&gt; () in closure #1 (inout LoginFeature.PhoneInputReducer.State, LoginFeature.PhoneInputReducer.Action) -&gt; ComposableArchitecture.Effect&lt;LoginFeature.PhoneInputReducer.Action&gt; in LoginFeature.PhoneInputReducer.body.getter : some"
+                  moduleName = "AisleAssignment.debug.dylib"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/varunadit/iOS%20Dev/AisleAssignment/AisleAssignment/aisle/Sources/LoginFeature/PhoneNumberFeature/PhoneInputReducer.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "58"
+                  endingLineNumber = "58">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

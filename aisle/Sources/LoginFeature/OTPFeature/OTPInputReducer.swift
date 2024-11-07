@@ -7,6 +7,9 @@
 
 import ComposableArchitecture
 import SwiftUI
+import APIClient
+import SharedModels
+import Foundation
 
 @Reducer
 public struct OTPInputReducer: Sendable {
@@ -43,12 +46,23 @@ public struct OTPInputReducer: Sendable {
     }
     
     @Dependency(\.continuousClock) var clock
+    @Dependency(\.apiClient.postOTP) var postOTP
     
     public var body: some ReducerOf<Self> {
         Reduce { state, action in
             switch action {
             case let .didTapContinue(otp):
-                return .none
+                return .run { [phoneNumber = state.phoneNumber] send in
+                    let response = try await postOTP(OTPVerification(phoneNumber: phoneNumber, otp: otp))
+                    switch response {
+                    case let .success(otpResponse):
+                        UserDefaults.standard.set(true, forKey: "logged_in")
+                        break
+                    case .failure:
+                        break
+                    }
+                }
+//                return .none
             case .didTapEditPhoneNumber:
                 return .none
             case .startTimer:

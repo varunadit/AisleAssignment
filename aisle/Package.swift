@@ -28,6 +28,14 @@ let package = Package(
             name: "LoginFeature",
             targets: ["LoginFeature"]
         ),
+        .library(
+            name: "APIClient",
+            targets: ["APIClient"]
+        ),
+        .library(
+            name: "HomeFeature",
+            targets: ["HomeFeature"]
+        )
     ],
     dependencies: [
         .package(
@@ -42,6 +50,11 @@ let package = Package(
             url: "https://github.com/pointfreeco/swift-parsing",
             exact: "0.13.0"
         ),
+        .package(
+            url: "https://github.com/pointfreeco/swift-dependencies",
+            exact: "1.4.1"
+        )
+
     ],
     targets: [
         // Targets are the basic building blocks of a package, defining a module or a test suite.
@@ -79,6 +92,7 @@ let package = Package(
             name: "LoginFeature",
             dependencies: [
                 "AisleUI",
+                "APIClient",
                 .product(name: "ComposableArchitecture", package: "swift-composable-architecture"),
             ]
         ),
@@ -87,6 +101,23 @@ let package = Package(
             dependencies: [
                 "LoginFeature",
                 .product(name: "ComposableArchitecture", package: "swift-composable-architecture")
+            ]
+        ),
+        .target(
+            name: "APIClient",
+            dependencies: [
+                "SharedModels",
+                "ServerRouter",
+                .product(name: "Dependencies", package: "swift-dependencies"),
+                .product(name: "DependenciesMacros", package: "swift-dependencies")
+            ]
+        ),
+        .target(
+            name: "HomeFeature",
+            dependencies: [
+                "AisleUI",
+                "APIClient",
+                .product(name: "ComposableArchitecture", package: "swift-composable-architecture"),
             ]
         ),
     ]

@@ -7,9 +7,11 @@
 
 import ComposableArchitecture
 import Foundation
+import SharedModels
+import APIClient
 
 @Reducer
-public struct PhoneInputReducer {
+public struct PhoneInputReducer : Sendable{
     
     public init() {}
     
@@ -31,7 +33,10 @@ public struct PhoneInputReducer {
         case binding(BindingAction<State>)
         case didTapContinue(String)
         case otpInput(PresentationAction<OTPInputReducer.Action>)
+        case successResponse
     }
+    
+    @Dependency(\.apiClient.postPhoneNumber) var phoneNumberAPI
         
     public var body: some ReducerOf<Self> {
         BindingReducer()
@@ -39,10 +44,28 @@ public struct PhoneInputReducer {
             switch action {
             case .binding:
                 return .none
+            case .successResponse:
+                state.otpInput = OTPInputReducer.State(phoneNumber: state.phoneNumber, countryCode: state.countryCode)
+                return .none
             case let .didTapContinue(phoneNumber):
                 state.phoneNumber = phoneNumber
-                state.otpInput = OTPInputReducer.State(phoneNumber: phoneNumber, countryCode: state.countryCode)
-                return .none
+                return .run { [phoneNumber = state.phoneNumber, countryCode = state.countryCode] send in
+                    do {
+                        let response = try await phoneNumberAPI(PhoneNumber(phoneNumber: countryCode+phoneNumber))
+                        switch response {
+                        case let .success(response):
+                            if response.status == true {
+                                await send(.successResponse)
+                            }
+                            break
+                        case let .failure(error):
+                            print(error)
+                            break
+                        }
+                    } catch {
+                        print(error)
+                    }
+                }
             case let .otpInput(presentationAction):
                 switch presentationAction {
                 case .dismiss:
@@ -50,7 +73,7 @@ public struct PhoneInputReducer {
                 case let .presented(presentedAction):
                     switch presentedAction {
                     case .didTapResend:
-                        return .none
+                        return .send(.didTapContinue(state.phoneNumber))
                     case .didTapEditPhoneNumber:
                         state.otpInput = nil
                         return .none
